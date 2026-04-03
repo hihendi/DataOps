@@ -1,0 +1,19 @@
+- hosts: all
+  become: yes
+  roles:
+    - common
+
+- hosts: vm1
+  become: yes
+  roles:
+    - k3s
+
+- hosts: vm2
+  become: yes
+  roles:
+    - storage
+
+- hosts: vm3
+  become: yes
+  roles:
+    - devops

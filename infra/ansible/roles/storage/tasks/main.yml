@@ -1,0 +1,11 @@
+- name: Install Postgresql
+  apt:
+    name: postgresql
+    state: present
+    update_cache: yes
+
+- name: Install MinIO
+  shell: |
+    curl -O https://dl.min.io/server/minio/release/linux-amd64/minio
+    chmod +x minio
+    mv minio /usr/local/bin/
